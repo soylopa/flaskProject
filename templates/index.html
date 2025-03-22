@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My page</title>
+    </head>
+    <body>
+        {% if name%}
+        <h1>Hola, {{ name }}</h1>
+        {% else %}
+        <h1> hola, desconocido</h1>
+        {% endif%}
+        <p>Este texto fue actualizado por última vez el {{ date }}</p>
+    </body>
+</html>
