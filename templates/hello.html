@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} Pagina de Hello {% endblock %}
+{% block content %}
+    {% if valores.nombre is none and valores.id is none %}
+    <h1>Hola Mundo</h1>
+    {% elif valores.id is none %}
+    <h1>Hola {{ valores.nombre }}!</h1>
+    {% elif valores.apellido is none %}
+    <h1>Hola Sr {{ valores.apellido }}, mucho gusto! </h1>
+    {% else %}
+    <h2>Mis datos</h2>
+    <ul>
+        <li>Nombre: {{ valores.nombre }}</li>
+        <li>Apellido: {{ valores.apellido }}</li>
+        <li>ID de usuario: {{ valores.id }}</li>
+    </ul>
+
+{% endblock %}
